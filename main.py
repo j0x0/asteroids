@@ -1,3 +1,4 @@
+import sys
 import pygame
 from player import *
 from constants import *
@@ -37,9 +38,6 @@ def main():
         
         pygame.display.flip()
         dt = (time.tick(60))/1000
-
-def new_func():
-    SystemExit
 
 
 if __name__ == "__main__":
