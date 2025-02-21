@@ -25,11 +25,21 @@ def main():
             if event.type == pygame.QUIT:
                 return
         updatable.update(dt)
+        for astroid in asteroids:
+            if astroid.isCollision(player):
+                print("Game over!")
+                sys.exit()
+        
         screen.fill("black")
+        
         for object in drawable:
             object.draw(screen)
+        
         pygame.display.flip()
         dt = (time.tick(60))/1000
+
+def new_func():
+    SystemExit
 
 
 if __name__ == "__main__":
