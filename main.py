@@ -36,7 +36,7 @@ def main():
             for bullet in shots:
                 if astroid.isCollision(bullet):
                     bullet.kill()
-                    astroid.kill()
+                    astroid.split()
         screen.fill("black")
         
         for object in drawable:
